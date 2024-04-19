@@ -1,11 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
+import { Container , ThemeProvider, createTheme } from '@mui/material';
+
 
 function App() {
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+});
+
   return (
-    <div className="App">
-      
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <Container>
+        <Header/>
+      </Container>
+    </ThemeProvider>
   );
 }
 
